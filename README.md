@@ -1,7 +1,7 @@
 # compare-ini-files
 
 The problem: You have multiple copies of an ini-file (https://en.wikipedia.org/wiki/INI_file) 
-in use by an app (possibly an app deployed in multiple datacenters...), and you want to compare them.
+in use by an app (possibly an app deployed in multiple datacenters...), and you want to compare them/diff them.
 
 
 Solution: This script.  The syntax is simple: 
