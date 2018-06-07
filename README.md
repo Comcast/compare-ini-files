@@ -8,10 +8,18 @@ Solution: This script.  The syntax is simple:
 ./compare-ini-files filename1 filename2 [filename3 [filename4 [... ] ] ]
 ```
 
-
 After loading the contents of the specified files into memory, this script
 then checks to make sure all stanzas exist in each file, then does a key-by-key
 comparison on each stanza, and reports any differences between the files.
+
+
+## Installation
+
+```
+brew tap comcast/opensource git@github.com:Comcast/homebrew-opensource.git
+brew install compare-ini-files
+```
+
 
 ## Testing out the script
 
