@@ -567,7 +567,7 @@ function printDiffStanzas($data) {
 			if ($num_values > 1) {
 
 				if (!$stanza_printed) {
-					print "Stanza: [$stanza]\n";
+					print "Stanza: [$stanza]\n\n";
 					$stanza_printed = true;
 				}
 
