@@ -554,6 +554,8 @@ function printDiffStanza($name, $data) {
 */
 function printDiffStanzas($data) {
 
+	$any_stanza_printed = false;
+
 	foreach ($data as $key => $value) {
 		$stanza = $key;
 		$stanza_printed = false;
@@ -575,9 +577,16 @@ function printDiffStanzas($data) {
 
 		}
 
+		if ($stanza_printed) {
+			$any_stanza_printed = true;
+		}
 	}
 
-}
+	if (!$any_stanza_printed) {
+		print("# All files match!\n");
+	}
+
+} // End of printDiffStanzas()
 
 
 /**
