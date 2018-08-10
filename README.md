@@ -16,7 +16,7 @@ comparison on each stanza, and reports any differences between the files.
 ## Installation
 
 ```
-brew tap comcast/opensource git@github.com:Comcast/homebrew-opensource.git
+brew tap comcast/opensource https://github.com/Comcast/homebrew-opensource.git
 brew install compare-ini-files
 ```
 
