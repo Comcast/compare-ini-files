@@ -126,6 +126,11 @@ function parseConf($file) {
 function parseConfLinesIsStanza($line) {
 
 	$len = strlen($line);
+
+	if ($len == 0) {
+		return(false);
+	}
+
 	$index = $len - 1;
 	$first = $line[0];
 	$last = $line[$index];
@@ -503,7 +508,7 @@ function printMissingStanzas($data) {
 		print "File: '$key' is missing the following stanzas:\n";
 
 		foreach ($value as $key2 => $value2) {
-			print "\t$value2\n";
+			print "\t[$value2]\n";
 		}
 
 		print "\n";
@@ -523,23 +528,23 @@ function printMissingStanzas($data) {
 */
 function printDiffStanza($name, $data) {
 
-	print "\tKey: '$name' found with multiple values:\n";
+	print "\tKey: '$name' found with multiple values:\n\n";
 
 	foreach ($data as $key2 => $value2) {
 
 		if ($key2 != "notfound") {
-			print "\t\tValue '$key2' found in files:\n";
+			print "\t\tValue '$key2' found in files:\n\n";
 		} else {
-			print "\t\tThese files did NOT contain the key:\n";
+			print "\t\tThese files did NOT contain the key:\n\n";
 		}
 
 		foreach ($value2 as $key3 => $value3) {
 			print "\t\t\t$value3\n";
 		}
 
-	}
+		print("\n");
 
-	print "\n";
+	}
 
 } // End of printDiffStanza()
 
@@ -560,7 +565,7 @@ function printDiffStanzas($data) {
 			if ($num_values > 1) {
 
 				if (!$stanza_printed) {
-					print "Stanza: $stanza\n";
+					print "Stanza: [$stanza]\n";
 					$stanza_printed = true;
 				}
 
@@ -568,10 +573,6 @@ function printDiffStanzas($data) {
 
 			}
 
-		}
-
-		if ($stanza_printed) {
-			print "\n";
 		}
 
 	}
