@@ -30,9 +30,9 @@ The output should resemble this:
 #
 # Starting config file audit of the following files:
 #
-#       test/file1.conf
-#       test/file2.conf
-#       test/file3.conf
+#	test/file1.conf
+#	test/file2.conf
+#	test/file3.conf
 #
 #
 # Loading files...
@@ -41,15 +41,21 @@ The output should resemble this:
 # Comparing contents...
 #
 File: 'test/file3.conf' is missing the following stanzas:
-        this stanza is found in file 1 and 2
+	[this stanza is found in file 1 and 2]
 
-Stanza: common
-        Key: 'specific to file3' found with multiple values:
-                Value 'somevalue' found in files:
-                        test/file3.conf
-                These files did NOT contain the key:
-                        test/file1.conf
-                        test/file2.conf
+Stanza: [common in all files]
+
+	Key: 'specific to file3' found with multiple values:
+
+		Value 'somevalue' found in files:
+
+			test/file3.conf
+
+		These files did NOT contain the key:
+
+			test/file1.conf
+			test/file2.conf
+
 
 ```
 
