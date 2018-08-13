@@ -5,7 +5,7 @@ in use by an app (possibly an app deployed in multiple datacenters...), and you 
 
 Solution: This script.  The syntax is simple: 
 ```
-./compare-ini-files filename1 filename2 [filename3 [filename4 [... ] ] ]
+compare-ini-files filename1 filename2 [filename3 [filename4 [... ] ] ]
 ```
 
 After loading the contents of the specified files into memory, this script
