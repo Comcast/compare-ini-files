@@ -66,6 +66,16 @@ Stanza: [common in all files]
 - Read access to the files in question
 
 
+## Development
+
+Development can be done in Docker:
+
+`docker build -t compare-ini-files . && docker run -it -v $(pwd):/mnt compare-ini-files test/*`
+
+That command builds an image locally and runs the `compare-ini-files` script inside of a 
+Docker container.
+
+
 ## Author
 <a name="author"></a>
 
